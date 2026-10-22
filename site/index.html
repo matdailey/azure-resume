@@ -5,20 +5,17 @@
 <head>
 
    <meta charset="utf-8">
-   <title>Mathew Dailey | Senior Cloud Engineer</title>
-   <meta name="description" content="Senior Cloud Engineer specializing in Microsoft Azure, Microsoft 365, and PowerShell automation. 20+ years experience across Fortune 500, government, and non-profit.">
+   <title>Mathew Dailey | Microsoft 365 &amp; Azure Platform Governance</title>
+   <meta name="description" content="Microsoft cloud platform leader with 20+ years across government, non-profit, and Fortune 500 organizations, governing a 25+ tenant Microsoft 365, Entra ID, and Azure estate. Platform governance, identity and security, multi-tenant cloud operations.">
    <meta name="author" content="Mathew Dailey">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
    <link rel="stylesheet" href="css/default.css">
    <link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
-
-   <script src="js/modernizr.js"></script>
 
    <style>
       /* ── Global ── */
+      html { scroll-behavior: smooth; }
       :root {
          --teal: #11ABB0;
          --teal-dark: #0D8A8E;
@@ -26,6 +23,15 @@
          --mid: #313131;
          --light-bg: #f8f9fa;
          --text-muted: #6e7881;
+      }
+
+      @media (max-width: 768px) {
+         #nav-wrap { padding: 10px 0; }
+         #nav-wrap .mobile-btn { display: none !important; }
+         #nav-wrap ul#nav { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 4px 14px; height: auto !important; }
+         #nav-wrap ul#nav li { display: block !important; float: none !important; width: auto !important; }
+         #nav-wrap ul#nav li a { font-size: 13px !important; padding: 6px 4px !important; }
+         header .banner { padding-top: 90px; }
       }
 
       /* ── Nav ── */
@@ -159,6 +165,9 @@
          transition: background 0.2s, color 0.2s;
       }
       .skill-tag:hover { background: var(--teal); color: #fff; }
+
+      /* ── Section headings (were white on light backgrounds) ── */
+      #about h2, #certifications h2, .skills-section h2, #resume h2 { color: var(--dark); }
 
       /* ── Architecture diagram ── */
       .arch-block {
@@ -490,8 +499,8 @@
          <div class="banner-text">
             <span class="availability-badge"><span class="dot"></span> Open to New Opportunities</span>
             <h1 class="responsive-headline">Mathew Dailey</h1>
-            <p class="subtitle">Senior Cloud Engineer &nbsp;·&nbsp; Azure &nbsp;·&nbsp; Microsoft 365 &nbsp;·&nbsp; PowerShell</p>
-            <p class="tagline">20+ years designing and delivering enterprise cloud solutions that scale, stay secure, and reduce costs.</p>
+            <p class="subtitle">Platform Governance &nbsp;·&nbsp; Identity &amp; Security &nbsp;·&nbsp; Multi-Tenant Cloud Operations</p>
+            <p class="tagline">Microsoft 365 &amp; Azure platform leader governing a 25+ tenant Entra ID estate for state and county courts, with 20+ years across government, non-profit, and Fortune 500 organizations.</p>
             <hr />
             <div class="hero-cta-group">
                <a href="#contact" class="smoothscroll btn-primary">Get In Touch</a>
@@ -509,16 +518,16 @@
             <span class="label">Years Experience</span>
          </div>
          <div class="impact-item">
+            <span class="number">25+</span>
+            <span class="label">Tenants Governed</span>
+         </div>
+         <div class="impact-item">
             <span class="number">22K+</span>
             <span class="label">Users Supported</span>
          </div>
          <div class="impact-item">
-            <span class="number">F500</span>
-            <span class="label">Enterprise Clients</span>
-         </div>
-         <div class="impact-item">
-            <span class="number">3+</span>
-            <span class="label">Full Cloud Migrations</span>
+            <span class="number">880</span>
+            <span class="label">VMs Secured with CrowdStrike</span>
          </div>
          <div class="impact-item">
             <span class="number">4</span>
@@ -532,24 +541,24 @@
       <div class="row">
          <div class="twelve columns">
             <span class="section-label">About Me</span>
-            <h2>Cloud Engineer. Problem Solver. Trusted Partner.</h2>
-            <p>I'm a Senior Cloud Engineer with over 20 years of experience across Fortune 500 companies, government agencies, and non-profits. I specialize in <strong>Microsoft Azure, Microsoft 365, and PowerShell automation</strong> — designing and delivering cloud solutions that scale, stay secure, and reduce costs.</p>
-            <p>I've architected hybrid identity infrastructure for enterprise environments with 22,000+ users, led on-premises-to-Azure migrations that converted CapEx to OpEx, and built automation that eliminates the manual work slowing teams down.</p>
-            <p>I bring senior-level technical depth paired with the communication skills to work effectively across engineering teams, leadership, and stakeholders — from the terminal to the boardroom.</p>
+            <h2>Platform Governance. Identity &amp; Security. Trusted Partner.</h2>
+            <p>I'm a Microsoft cloud platform leader with 20+ years across government, non-profit, and Fortune 500 organizations, currently governing a <strong>25+ tenant Microsoft 365, Entra ID, and Azure estate</strong> that serves state and county courts. I establish platform governance models: identity and Conditional Access standards, license and tenant lifecycle management, policy-as-code, and least-privilege delegated administration, while keeping mission-critical services running.</p>
+            <p>I lead cross-functional initiatives with Security, Infrastructure, Sales, and executive stakeholders through M&amp;A integration and digital transformation, and I translate technical risk into clear executive recommendations.</p>
+            <p class="quote"><em>&ldquo;Documentation is a love letter that you write to your future self.&rdquo;</em></p>
 
             <div class="skills-grid">
-               <span class="skill-tag">Microsoft Azure</span>
                <span class="skill-tag">Microsoft 365</span>
+               <span class="skill-tag">Entra ID / Conditional Access</span>
+               <span class="skill-tag">Microsoft Azure</span>
+               <span class="skill-tag">Azure Lighthouse</span>
+               <span class="skill-tag">Azure Policy</span>
                <span class="skill-tag">PowerShell</span>
-               <span class="skill-tag">Entra ID / Azure AD</span>
                <span class="skill-tag">Microsoft Intune</span>
                <span class="skill-tag">Microsoft Sentinel</span>
-               <span class="skill-tag">Azure Kubernetes (AKS)</span>
-               <span class="skill-tag">CI/CD Pipelines</span>
-               <span class="skill-tag">VMware</span>
-               <span class="skill-tag">Disaster Recovery</span>
-               <span class="skill-tag">Security &amp; Compliance</span>
-               <span class="skill-tag">JAMF / macOS</span>
+               <span class="skill-tag">CrowdStrike Falcon</span>
+               <span class="skill-tag">Tenable Cloud Security</span>
+               <span class="skill-tag">GDAP / CSP Licensing</span>
+               <span class="skill-tag">Change Control</span>
             </div>
 
             <div class="arch-block">
@@ -638,7 +647,7 @@
 <div class="arch-card"><h5>Monitoring &amp; Ops</h5><ul><li>App Insights (APM)</li><li>Azure Monitor Alerts</li><li>Log Analytics (KQL)</li><li>Workbooks / Dashboards</li><li>SolarWinds / Splunk</li><li>Runbooks / Automation</li></ul></div>
    </div>
 </section>
-                  <p class="arch-foot">Mathew Dailey · Senior Cloud &amp; IAM Engineer · Azure Administrator (AZ-104) · matdailey.com</p>
+                  <p class="arch-foot">Mathew Dailey · Platform Engineer · Azure Administrator (AZ-104) · matdailey.com</p>
                </div>
             </div>
          </div>
@@ -696,72 +705,94 @@
       <div class="row">
          <div class="twelve columns section-header">
             <span class="section-label">Technical Skills</span>
-            <h2>Full Stack Cloud Expertise</h2>
+            <h2>Core Skills</h2>
          </div>
       </div>
       <div class="row">
          <div class="six columns">
             <div class="skill-category">
-               <h4>Cloud &amp; Infrastructure</h4>
+               <h4>Microsoft 365 &amp; Power Platform</h4>
                <div class="skill-pills">
-                  <span class="skill-pill">Azure IaaS / PaaS / SaaS</span>
-                  <span class="skill-pill">AKS</span>
-                  <span class="skill-pill">Azure Recovery Vaults</span>
-                  <span class="skill-pill">Azure Front Door</span>
-                  <span class="skill-pill">ARM Templates</span>
-                  <span class="skill-pill">Azure Policy</span>
-                  <span class="skill-pill">Reserved Instances</span>
-                  <span class="skill-pill">VMware ESXi &amp; vCenter</span>
-                  <span class="skill-pill">Nutanix</span>
-                  <span class="skill-pill">Zerto DR</span>
-                  <span class="skill-pill">VMware SRM</span>
+                  <span class="skill-pill">Teams</span>
+                  <span class="skill-pill">SharePoint Online</span>
+                  <span class="skill-pill">OneDrive</span>
+                  <span class="skill-pill">Exchange Online</span>
+                  <span class="skill-pill">Power Platform administration</span>
                </div>
             </div>
             <div class="skill-category">
-               <h4>Identity &amp; Security</h4>
+               <h4>Governance &amp; Compliance</h4>
                <div class="skill-pills">
-                  <span class="skill-pill">Entra ID / Azure AD</span>
-                  <span class="skill-pill">Active Directory</span>
+                  <span class="skill-pill">Platform governance models</span>
+                  <span class="skill-pill">Policies &amp; standards</span>
+                  <span class="skill-pill">Change control</span>
+                  <span class="skill-pill">Tenant &amp; license lifecycle</span>
+                  <span class="skill-pill">Data Loss Prevention (DLP)</span>
+               </div>
+            </div>
+            <div class="skill-category">
+               <h4>Identity &amp; Access</h4>
+               <div class="skill-pills">
+                  <span class="skill-pill">Entra ID</span>
                   <span class="skill-pill">Conditional Access</span>
-                  <span class="skill-pill">SAML SSO &amp; OAuth</span>
                   <span class="skill-pill">MFA</span>
-                  <span class="skill-pill">Microsoft Sentinel</span>
-                  <span class="skill-pill">Defender for Endpoint</span>
-                  <span class="skill-pill">DLP</span>
+                  <span class="skill-pill">SAML / OAuth SSO</span>
+                  <span class="skill-pill">ADFS</span>
+                  <span class="skill-pill">Microsoft Graph</span>
+                  <span class="skill-pill">Service principal lifecycle</span>
+               </div>
+            </div>
+            <div class="skill-category">
+               <h4>Azure &amp; Multi-Tenant</h4>
+               <div class="skill-pills">
+                  <span class="skill-pill">Azure</span>
+                  <span class="skill-pill">Azure Policy</span>
+                  <span class="skill-pill">RBAC</span>
+                  <span class="skill-pill">Azure Lighthouse</span>
+                  <span class="skill-pill">GDAP</span>
                   <span class="skill-pill">Key Vault</span>
                   <span class="skill-pill">Managed Identities</span>
-                  <span class="skill-pill">Private Endpoints</span>
+                  <span class="skill-pill">Cost management</span>
                </div>
             </div>
          </div>
          <div class="six columns">
             <div class="skill-category">
-               <h4>Microsoft 365 &amp; Endpoint</h4>
+               <h4>Security Operations</h4>
                <div class="skill-pills">
-                  <span class="skill-pill">Exchange Online</span>
-                  <span class="skill-pill">Teams</span>
-                  <span class="skill-pill">SharePoint</span>
-                  <span class="skill-pill">OneDrive</span>
-                  <span class="skill-pill">Power Platform</span>
-                  <span class="skill-pill">Intune MDM/MAM</span>
-                  <span class="skill-pill">JAMF</span>
-                  <span class="skill-pill">Windows Server</span>
-                  <span class="skill-pill">WSUS</span>
-                  <span class="skill-pill">WSFC</span>
-                  <span class="skill-pill">SQL Availability Groups</span>
+                  <span class="skill-pill">Microsoft Sentinel (SIEM/SOAR)</span>
+                  <span class="skill-pill">Defender for Endpoint</span>
+                  <span class="skill-pill">CrowdStrike Falcon</span>
+                  <span class="skill-pill">Tenable Cloud Security</span>
                </div>
             </div>
             <div class="skill-category">
-               <h4>Automation &amp; DevOps</h4>
+               <h4>Endpoint Management</h4>
+               <div class="skill-pills">
+                  <span class="skill-pill">Microsoft Intune (MDM/MAM)</span>
+                  <span class="skill-pill">Windows LAPS</span>
+                  <span class="skill-pill">Workspace ONE</span>
+                  <span class="skill-pill">JAMF (macOS &amp; iOS)</span>
+               </div>
+            </div>
+            <div class="skill-category">
+               <h4>Automation &amp; IaC</h4>
                <div class="skill-pills">
                   <span class="skill-pill">PowerShell</span>
-                  <span class="skill-pill">DSC</span>
-                  <span class="skill-pill">CI/CD Pipelines</span>
-                  <span class="skill-pill">Azure DevOps</span>
-                  <span class="skill-pill">SPN Lifecycle Automation</span>
-                  <span class="skill-pill">IIS Automation</span>
-                  <span class="skill-pill">SolarWinds</span>
-                  <span class="skill-pill">Splunk</span>
+                  <span class="skill-pill">ARM templates</span>
+                  <span class="skill-pill">CI/CD pipelines</span>
+                  <span class="skill-pill">Azure DevOps / VSTS</span>
+               </div>
+            </div>
+            <div class="skill-category">
+               <h4>Infrastructure &amp; DR</h4>
+               <div class="skill-pills">
+                  <span class="skill-pill">VMware vSphere &amp; SRM</span>
+                  <span class="skill-pill">Veeam</span>
+                  <span class="skill-pill">Zerto</span>
+                  <span class="skill-pill">Pure Storage</span>
+                  <span class="skill-pill">WSFC &amp; SQL Availability Groups</span>
+                  <span class="skill-pill">WSUS</span>
                </div>
             </div>
          </div>
@@ -775,58 +806,94 @@
             <span class="section-label">Work History</span>
             <h2 style="margin-bottom:40px;">Experience</h2>
 
+            <!-- For The Record (FTR), a Tyler Technologies company -->
+            <div class="job-card">
+               <div class="job-header">
+                  <h3>For The Record (FTR), a Tyler Technologies company</h3>
+                  <span class="job-badge">Current</span>
+               </div>
+               <div class="job-meta">Platform Engineer &nbsp;·&nbsp; <span>August 2025 – Present</span> &nbsp;·&nbsp; Phoenix, AZ</div>
+               <p class="summary">Govern a Microsoft cloud estate of 25+ Entra ID tenants serving state and county courts and judicial agencies, where live-courtroom uptime makes change control mission-critical.</p>
+               <div class="impact-highlight">Designed a centralized multi-tenant governance model with Azure Lighthouse, building idempotent, resumable PowerShell/ARM tooling that onboarded <strong>23+ customer subscriptions</strong> and delegated least-privilege access to a managed admin security group.</div>
+               <ul>
+                  <li>Lead and mentor engineers on the team, delegating workstreams, reviewing their work, and coaching them on Azure governance, Entra ID, and PowerShell, with runbooks they can run independently</li>
+                  <li>Established the corporate tenant's identity and endpoint governance baseline prior to the Tyler acquisition: Conditional Access policies, Intune device compliance, Windows LAPS, macOS configuration profiles, and an authentication-methods audit</li>
+                  <li>Co-authored FTR's enterprise security policy framework, translating identity, access, device, and data-protection requirements into documented standards and visual policy maps for leadership</li>
+                  <li>Built read-only governance audits across every subscription to identify Owner-access gaps and orphaned privilege, separating actionable risk from expected cases for remediation</li>
+                  <li>Led Microsoft 365 license governance with the CSP partner via GDAP, inventorying per-tenant usage of Teams Phone, Audio Conferencing, Office 365, and Azure resources to right-size NCE renewal commitments and avoid unneeded term lock-in</li>
+                  <li>Run a change-controlled tenant lifecycle and decommission program, auditing M365 license assignments, groups, apps, devices, and Azure resources across 14 tenants in phased waves before retirement</li>
+                  <li>Enforced an endpoint security baseline after acquisition, deploying CrowdStrike Falcon to 880 of 888 Azure VMs across 11 customer subscriptions and sustaining coverage with Azure Policy DeployIfNotExists assignments</li>
+                  <li>Integrated tenants with the parent company's Tenable Cloud Security platform, granting scoped Azure RBAC roles and Microsoft Graph application permissions per tenant in partnership with the acquiring security team</li>
+                  <li>Advised executive leadership on M&amp;A integration risk, assessing the security impact of moving from cloud-only Entra ID/Intune to a hybrid-joined Okta and Workspace ONE stack and preparing briefing topics for the COO and CEO</li>
+                  <li>Protected production by applying CanNotDelete resource locks to business-critical resource groups, and provisioned an Azure data platform (ADLS Gen2, Data Factory, Azure SQL) for Business Central analytics</li>
+                  <li>Partner with Sales on Virtual Justice forecasting, supplying VM counts, reserved-instance status, and licensing terms per customer, and own customer exit planning for non-renewing tenants</li>
+               </ul>
+            </div>
+
+            <!-- Yrefy -->
+            <div class="job-card">
+               <div class="job-header">
+                  <h3>Yrefy <span style="font-weight:normal; font-size:16px;">&nbsp;via Infoway Software</span></h3>
+               </div>
+               <div class="job-meta">Cloud Engineer (Contract) &nbsp;·&nbsp; <span>June – August 2025</span> &nbsp;·&nbsp; Phoenix, AZ</div>
+               <p class="summary">Phoenix-based student loan refinancing fintech. Administered Azure and Microsoft 365, supporting secure, compliant cloud operations in a regulated financial-services environment.</p>
+               <ul>
+                  <li>Established Azure governance by designing and implementing Azure Policy assignments and an RBAC roles-and-responsibilities model, setting compliance guardrails and least-privilege access across the environment</li>
+                  <li>Helped build the Invessio application, provisioning and securing its Azure infrastructure and partnering with the development team and CTO through delivery</li>
+                  <li>Delivered structured knowledge transfer and documentation to the internal technology team at contract completion</li>
+               </ul>
+            </div>
+
             <!-- Altair Global -->
             <div class="job-card">
                <div class="job-header">
                   <h3>Altair Global</h3>
-                  <span class="job-badge">Current</span>
                </div>
-               <div class="job-meta">Senior Systems Engineer &nbsp;·&nbsp; <span>March 2022 – Present</span> &nbsp;·&nbsp; Dallas, TX</div>
-               <p class="summary">Global relocation management firm. Responsible for enterprise cloud infrastructure, identity management, security, and virtualization across multiple regions.</p>
-               <div class="impact-highlight">Pioneered Azure Policy framework for corporate governance, driving measurable improvement in compliance adherence across the organization. Led global VMware upgrades (ESXi 6.5 → 8.0 U2) and eliminated hardcoded credentials enterprise-wide via Key Vault strategies.</div>
+               <div class="job-meta">Senior Engineer &nbsp;·&nbsp; <span>March 2022 – March 2026</span> &nbsp;·&nbsp; Dallas, TX</div>
+               <p class="summary">Global relocation management firm.</p>
+               <div class="impact-highlight">Pioneered compliance standards by designing Azure policies for corporate governance, and led global VMware upgrades (6.5 → ESXi 8.0 U2, vCenter 8.0 U3).</div>
                <ul>
-                  <li>Managed enterprise-scale hybrid identity infrastructure across on-premises Active Directory and Azure Entra ID, including Group Policy, domain migrations, and SSO/LDAP integrations</li>
-                  <li>Designed Conditional Access policies enforcing controlled access based on user and device compliance criteria</li>
-                  <li>Developed Azure Recovery Vaults with resource locks and advanced security to prevent accidental deletions and ensure business continuity</li>
-                  <li>Leveraged Managed Identities to connect Azure resources securely without credential sharing</li>
-                  <li>Deployed Veeam backup solutions for vCenter Server appliances, minimizing downtime and data loss risk</li>
-                  <li>Optimized Azure costs via Reserved Instances and budget tracking, reducing cloud expenditure while maintaining operational efficiency</li>
+                  <li>Built Azure Recovery Services vaults protected by resource locks and implemented Veeam backups for vCenter appliances, minimizing downtime and data-loss risk</li>
+                  <li>Migrated Datrium SAN to Pure Storage, implementing iSCSI over 25 Gb Ethernet for high-speed data access</li>
+                  <li>Established Key Vault and Managed Identity patterns so resources and Git pipelines connect securely without shared credentials</li>
+                  <li>Designed and implemented Entra ID Conditional Access policies that gate access to organizational resources on user and device compliance</li>
+                  <li>Reduced Azure spend by implementing Reserved Instances and budget tracking without sacrificing operational efficiency</li>
                </ul>
             </div>
 
-            <!-- JetBlue -->
+            <!-- JetBlue Airlines -->
             <div class="job-card">
                <div class="job-header">
                   <h3>JetBlue Airlines <span style="font-weight:normal; font-size:16px;">&nbsp;via Beacon Hill Staffing</span></h3>
                </div>
                <div class="job-meta">Senior Engineer, Cloud Platform &nbsp;·&nbsp; <span>March – September 2021</span> &nbsp;·&nbsp; New York, NY</div>
-               <p class="summary">Major U.S. airline. Embedded cloud platform engineer responsible for identity, security, and cloud infrastructure supporting 22,000+ employees.</p>
-               <div class="impact-highlight">Supported seamless authentication and access for <strong>22,000+ users</strong> via Entra ID SAML SSO and OAuth optimization. Automated SPN lifecycle management, reducing manual interventions and enhancing operational efficiency at scale.</div>
+               <p class="summary">Major U.S. airline. Embedded cloud platform engineer responsible for identity, security, and cloud infrastructure.</p>
+               <div class="impact-highlight">Optimized Entra ID authentication with SAML SSO, OAuth, and Conditional Access–enforced MFA for <strong>22,000+ users</strong>.</div>
                <ul>
-                  <li>Enforced enterprise-wide MFA through Conditional Access frameworks</li>
-                  <li>Deployed Azure Synapse, AKS clusters, SQL Data Factories, VMs, and Azure Front Door via ARM templates</li>
-                  <li>Administered M365 security policies across Exchange, Teams, SharePoint, OneDrive, and Power Platform</li>
-                  <li>Configured Azure private endpoints to minimize cloud environment exposure</li>
-                  <li>Administered Microsoft Intune for MDM/MAM across enterprise devices</li>
+                  <li>Automated SPN lifecycle management for both Enterprise apps and App Registrations, reducing manual interventions and enhancing operational efficiency</li>
+                  <li>Administered Microsoft Intune for Mobile Device Management (MDM) and Mobile Application Management (MAM), ensuring streamlined end-user device deployment and compliance</li>
+                  <li>Deployed Azure Synapse, Kubernetes Service, Data Factory, Virtual Machines, and Front Door with ARM templates for consistent, repeatable environments</li>
+                  <li>Developed and managed security policies for Microsoft 365 services, including Exchange, Teams, SharePoint, OneDrive, and Power Platform, to ensure compliance and safeguard organizational data</li>
+                  <li>Configured Azure private endpoints to establish secure communication pathways, enhancing data protection and minimizing exposure within cloud environments</li>
                </ul>
             </div>
 
-            <!-- Trinity Industries -->
+            <!-- Trinity Industries, Inc. -->
             <div class="job-card">
                <div class="job-header">
                   <h3>Trinity Industries, Inc.</h3>
                   <span class="job-badge" style="background:#555;">Fortune 500</span>
                </div>
                <div class="job-meta">Senior Systems Engineer &nbsp;·&nbsp; <span>September 2017 – September 2020</span> &nbsp;·&nbsp; Dallas, TX</div>
-               <p class="summary">Fortune 500 manufacturer. Led cloud migration and modernization initiatives across a large, complex enterprise environment through a period of significant corporate change.</p>
-               <div class="impact-highlight">Led a full on-premises to Azure Cloud migration, converting infrastructure from CapEx to OpEx — reducing costs and enabling immediate depreciation benefits. Delivered through a major corporate divestiture with zero application downtime.</div>
+               <p class="summary">Fortune 500 manufacturer.</p>
+               <div class="impact-highlight">Led the on-premises to Azure migration, improving performance, scalability, and security while shifting infrastructure spend from CapEx to OpEx.</div>
                <ul>
-                  <li>Deployed AKS clusters for machine learning workloads, enabling advanced data analysis capabilities</li>
-                  <li>Spearheaded Azure AD adoption for ADFS SAML-based authentication</li>
-                  <li>Designed disaster recovery solutions using Zerto replication technology</li>
-                  <li>Built CI/CD pipelines with Visual Studio Team Services, accelerating delivery cycles</li>
-                  <li>Configured VMware Site Recovery Manager and Replication suites for DR and business continuity</li>
-                  <li>Managed Microsoft Intune for Windows and mobile device environments across diverse teams</li>
+                  <li>Provided expertise in SQL and IIS technologies during corporate divestiture, ensuring uninterrupted application functionality</li>
+                  <li>Led the migration of corporate Windows and mobile devices to Microsoft Intune, overseeing application deployment and security policy enforcement for compliance</li>
+                  <li>Spearheaded Azure AD adoption for Active Directory Federation Services (ADFS) SAML-based authentication, improving access control</li>
+                  <li>Designed disaster recovery and business continuity using Zerto replication, VMware Site Recovery Manager, and vSphere Replication</li>
+                  <li>Developed CI/CD pipelines with Visual Studio Team Services, accelerating delivery cycles for development teams</li>
+                  <li>Deployed Azure Kubernetes Service (AKS) clusters for machine learning workloads, enabling advanced data analysis</li>
                </ul>
             </div>
 
@@ -836,54 +903,11 @@
                   <h3>Care Innovations</h3>
                </div>
                <div class="job-meta">Senior Systems Administrator &nbsp;·&nbsp; <span>March – July 2017</span> &nbsp;·&nbsp; Louisville, KY</div>
-               <p class="summary">Healthcare technology company focused on remote patient monitoring. Managed cloud infrastructure and DevOps pipelines in a highly regulated environment.</p>
+               <p class="summary">Healthcare technology company focused on remote patient monitoring.</p>
                <ul>
-                  <li>Automated IIS, SQL Server, and custom application deployments using ARM templates and DSC</li>
-                  <li>Configured Nutanix and VMware ESX for secure health data integration at co-located facilities</li>
-                  <li>Set up SolarWinds and Splunk for comprehensive performance monitoring and alerting</li>
-                  <li>Collaborated on CI/CD pipelines for home health monitoring solutions</li>
-               </ul>
-            </div>
-
-            <!-- Grote Industries -->
-            <div class="job-card">
-               <div class="job-header">
-                  <h3>Grote Industries, Inc.</h3>
-               </div>
-               <div class="job-meta">Senior Systems Administrator &nbsp;·&nbsp; <span>April 2013 – April 2017</span></div>
-               <p class="summary">Global manufacturer of vehicle lighting and safety systems. Enterprise Windows Server infrastructure, virtualization, and multi-site systems administration.</p>
-               <ul>
-                  <li>Managed enterprise Active Directory, Group Policy, DNS/DHCP across multiple facilities</li>
-                  <li>Administered VMware virtual environments and hardware lifecycle</li>
-                  <li>Led end-user systems, application deployments, and escalated helpdesk support</li>
-               </ul>
-            </div>
-
-            <!-- Absolute Network Solutions -->
-            <div class="job-card">
-               <div class="job-header">
-                  <h3>Absolute Network Solutions</h3>
-               </div>
-               <div class="job-meta">Network Engineer &nbsp;·&nbsp; <span>January 2011 – April 2013</span></div>
-               <p class="summary">Managed services provider. Designed and maintained network infrastructure for multiple clients across various industries.</p>
-               <ul>
-                  <li>Designed, implemented, and maintained LAN/WAN infrastructure for multi-client environments</li>
-                  <li>Configured and managed firewalls, switches, routers, and VPN solutions</li>
-               </ul>
-            </div>
-
-            <!-- Light Systems -->
-            <div class="job-card">
-               <div class="job-header">
-                  <h3>Light Systems Communications</h3>
-                  <span class="job-badge" style="background:#8a6a00;">Founder</span>
-               </div>
-               <div class="job-meta">Owner / Principal Consultant &nbsp;·&nbsp; <span>2000 – 2009</span></div>
-               <p class="summary">Founded and operated an independent IT consulting practice serving real estate and mortgage companies. Managed all aspects of the business through a highly competitive period — including the 2008 financial crisis.</p>
-               <ul>
-                  <li>Designed, deployed, and maintained network and server environments for small and mid-size clients</li>
-                  <li>Delivered managed IT services including Windows Server administration, workstation management, and helpdesk support</li>
-                  <li>Built long-term client relationships that sustained the business through the 2008 financial downturn</li>
+                  <li>Automated IIS, SQL Server, and custom application deployments with ARM templates and Desired State Configuration</li>
+                  <li>Set up Nutanix and VMware ESX servers for secure integration of health data at co-located facilities</li>
+                  <li>Configured SolarWinds and Splunk monitoring and supported CI/CD for home health applications</li>
                </ul>
             </div>
 
@@ -929,7 +953,7 @@
                <li><a href="https://linkedin.com/in/mathew-d-963b575/"><i class="fa fa-linkedin-square"></i></a></li>
             </ul>
             <ul class="copyright">
-               <li>&copy; 2026 Mathew Dailey &nbsp;·&nbsp; Senior Cloud Engineer</li>
+               <li>&copy; 2026 Mathew Dailey &nbsp;·&nbsp; Platform Engineer</li>
             </ul>
          </div>
          <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
@@ -937,15 +961,6 @@
    </footer>
 
    <!-- Scripts -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
-   <script src="js/visitorCounter.js"></script>
 
    <script>
       window.addEventListener("scroll", function () {
