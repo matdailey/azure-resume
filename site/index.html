@@ -171,48 +171,65 @@
 
       /* ── Architecture diagram ── */
       .arch-block {
-         margin-top: 56px;
-         background: var(--light-bg);
-         border-radius: 12px;
-         padding: 40px;
-         border: 1px solid #e8e8e8;
+         margin-top: 56px; padding: 44px 40px; border-radius: 16px; border: 1px solid #1f3a4d;
+         background: radial-gradient(1200px 500px at 85% -10%, rgba(17,171,176,.22), transparent 60%),
+                     radial-gradient(900px 500px at -10% 110%, rgba(0,120,212,.25), transparent 55%), #0a1422;
+         color: #dbe7f1;
       }
-      .arch-block h4 {
-         font-size: 13px;
-         text-transform: uppercase;
-         letter-spacing: 2px;
-         color: var(--text-muted);
-         margin-bottom: 24px;
-         font-family: 'opensans-semibold', sans-serif;
-      }
+      .arch-block h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #7fd8dc; margin: 0 0 22px; font-family: 'opensans-semibold', sans-serif; }
+      .arch-hero { text-align: center; max-width: 820px; margin: 0 auto 36px; }
+      .arch-hero h5 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0 0 14px; color: #fff; font-family: 'opensans-bold', sans-serif; letter-spacing: -.5px;
+         background: linear-gradient(90deg, #4fd1d6, #5aa9ff 60%, #b794ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      #about .arch-block .arch-hero p { font-size: 17px; line-height: 1.6; color: #c9d8e5; margin: 0 auto 26px; }
+      #about .arch-block .arch-hero p b { color: #fff; font-weight: 600; }
+      .arch-proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+      .arch-proof div { background: rgba(255,255,255,.05); border: 1px solid rgba(127,216,220,.25); border-radius: 12px; padding: 16px 14px; }
+      .arch-proof strong { display: block; font-size: 30px; line-height: 1.1; color: #4fd1d6; font-family: 'opensans-bold', sans-serif; }
+      .arch-proof span { display: block; font-size: 14px; line-height: 1.35; color: #c4d4e1; margin-top: 4px; }
 
-      .arch-block h4 { margin-bottom: 8px; }
-      .arch-title { text-align: center; margin: 8px 0 28px; }
-      .arch-title h5 { font-size: 22px; line-height: 1.3; color: #0078d4; margin: 0 0 6px; font-family: 'opensans-bold', sans-serif; }
-      .arch-title p { font-size: 15px; color: var(--text-muted); margin: 0; }
-      .arch-layer { --c: #0078d4; --bg: #eef6fd; border: 2px solid var(--c); background: var(--bg); border-radius: 14px; padding: 22px 22px 24px; }
-      .arch-layer.onprem { --c: #d98b06; --bg: #fff8e6; }
-      .arch-layer.entra { --c: #0078d4; --bg: #eef6fd; }
-      .arch-layer.platform { --c: #178a45; --bg: #effaf3; }
-      .arch-layer.consumers { --c: #7c2fd0; --bg: #f6effd; }
-      .arch-layer-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
-      .arch-num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--c); color: #fff; font: 700 17px/34px sans-serif; text-align: center; }
-      .arch-layer-head h5 { font-size: 19px; line-height: 1.25; color: var(--c); margin: 0; font-family: 'opensans-bold', sans-serif; }
-      .arch-layer-head p { font-size: 14.5px; color: #4b5560; margin: 2px 0 0; }
-      .arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
-      .arch-card { background: #fff; border: 1px solid color-mix(in srgb, var(--c) 35%, #fff); border-top: 4px solid var(--c); border-radius: 8px; padding: 14px 16px 12px; }
-      .arch-card h5 { font-size: 15.5px; line-height: 1.3; color: var(--c); margin: 0 0 8px; font-family: 'opensans-semibold', sans-serif; }
-      .arch-card ul { list-style: none; margin: 0; padding: 0; }
-      .arch-card li { font-size: 14px; line-height: 1.5; color: #2f3740; padding-left: 14px; position: relative; }
-      .arch-card li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--c); opacity: .7; }
-      .arch-banner { grid-column: 1 / -1; margin: 2px 0; padding: 10px 14px; text-align: center; font-weight: 700; font-style: italic; font-size: 15px; color: #0b4f8a; background: #d6e9fa; border-radius: 8px; }
-      .arch-flow { text-align: center; font-size: 13px; letter-spacing: .5px; text-transform: uppercase; color: var(--text-muted); margin: 10px 0; }
-      .arch-foot { text-align: center; font-size: 13px; color: var(--text-muted); margin: 26px 0 0; }
+      .arch-step { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; }
+      .arch-badge { flex: none; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #11ABB0, #0078d4); color: #fff; font: 700 17px/36px sans-serif; text-align: center; box-shadow: 0 0 0 4px rgba(17,171,176,.18); }
+      .arch-step h5 { margin: 0; font-size: 20px; line-height: 1.2; color: #fff; font-family: 'opensans-bold', sans-serif; }
+      #about .arch-block .arch-step p { margin: 2px 0 0; font-size: 14.5px; line-height: 1.4; color: #aebfce; }
+
+      .arch-row, .arch-chips, .arch-platform { list-style: none; margin: 0; padding: 0; }
+      .arch-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .arch-row li { padding: 9px 16px; border-radius: 999px; font-size: 15px; color: #e8f1f8; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); }
+      .arch-row-end li { border-color: rgba(183,148,255,.45); background: rgba(183,148,255,.1); }
+
+      .arch-link { display: flex; flex-direction: column; align-items: center; margin: 14px 0; color: #7fd8dc; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+      .arch-link i { display: block; width: 2px; height: 30px; background: linear-gradient(#11ABB0, #0078d4); position: relative; border-radius: 2px; }
+      .arch-link i::after { content: ''; position: absolute; left: -4px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #4fd1d6; box-shadow: 0 0 12px #4fd1d6; animation: arch-flow 1.8s ease-in infinite; }
+      .arch-link span { margin-top: 6px; }
+      @keyframes arch-flow { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(22px); opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .arch-link i::after { animation: none; } }
+
+      .arch-core { border: 2px solid #11ABB0; border-radius: 16px; padding: 24px 22px 22px; background: linear-gradient(160deg, rgba(17,171,176,.14), rgba(0,120,212,.1)); box-shadow: 0 0 0 6px rgba(17,171,176,.08), 0 18px 50px rgba(0,0,0,.35); }
+      .arch-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 4px; }
+      .arch-pillar { background: rgba(8,16,30,.72); border: 1px solid rgba(127,216,220,.22); border-radius: 12px; padding: 18px 18px 16px; transition: transform .2s, border-color .2s, box-shadow .2s; }
+      .arch-pillar:hover { transform: translateY(-3px); border-color: #4fd1d6; box-shadow: 0 10px 28px rgba(17,171,176,.22); }
+      .arch-pillar-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .arch-ico { font-size: 22px; line-height: 1; }
+      .arch-kicker { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: #7fd8dc; font-family: 'opensans-semibold', sans-serif; }
+      .arch-block .arch-pillar h5 { margin: 0 0 6px; line-height: 1.25; font-size: 18px; color: #fff; font-family: 'opensans-bold', sans-serif; }
+      #about .arch-block .arch-pillar p { margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; color: #c4d4e1; }
+      .arch-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+      .arch-chips li { font-size: 12.5px; padding: 4px 10px; border-radius: 999px; background: rgba(17,171,176,.16); color: #bff3f5; }
+
+      .arch-platform { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+      @media (max-width: 1000px) { .arch-platform { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } }
+      .arch-platform li { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; padding: 14px 16px; border-radius: 12px; background: rgba(23,138,69,.12); border: 1px solid rgba(74,222,128,.28); transition: transform .2s, border-color .2s; }
+      .arch-platform li:hover { transform: translateY(-3px); border-color: #4ade80; }
+      .arch-platform .arch-ico { grid-row: span 2; font-size: 24px; }
+      .arch-platform b { font-size: 15px; line-height: 1.25; color: #fff; font-weight: 600; }
+      .arch-platform small { font-size: 13px; line-height: 1.35; color: #b6d0c2; }
+
       @media (max-width: 600px) {
-         .arch-block { padding: 20px 14px; }
-         .arch-layer { padding: 16px 12px 18px; }
-         .arch-title h5 { font-size: 18px; }
-         .arch-grid { grid-template-columns: 1fr; }
+         .arch-block { padding: 26px 16px; }
+         .arch-proof strong { font-size: 26px; }
+         .arch-core { padding: 18px 12px 14px; }
+         .arch-pillars { grid-template-columns: 1fr; }
+         .arch-platform { grid-template-columns: 1fr 1fr; }
       }
 
       /* ── Certs Section ── */
@@ -563,91 +580,77 @@
 
             <div class="arch-block">
                <h4>Featured Architecture &nbsp;·&nbsp; Azure Identity &amp; Access Management</h4>
-               <div class="arch-diagram" role="group" aria-label="Azure identity, security and platform architecture">
-                  <div class="arch-title">
-                     <h5>Azure Cloud Architecture: Identity, Security &amp; Platform Services</h5>
-                     <p>Hybrid Identity · Zero Trust · IAM · Monitoring · CDN · DevOps · Governance</p>
+               <div class="arch-diagram" role="group" aria-label="Identity-first Azure architecture">
+                  <div class="arch-hero">
+                     <h5>Identity is the control plane.</h5>
+                     <p>Every sign-in, secret and workload in Azure runs through Entra ID. Here is how I design it: <b>verify explicitly</b>, <b>use least privilege</b>, <b>assume breach</b>.</p>
+                     <div class="arch-proof"><div><strong>25+</strong><span>Entra tenants governed</span></div><div><strong>22,000+</strong><span>users on Conditional Access MFA</span></div><div><strong>880 / 888</strong><span>VMs covered by Falcon via Azure Policy</span></div></div>
                   </div>
 
-<section class="arch-layer onprem" aria-labelledby="arch-onprem">
-   <div class="arch-layer-head">
-      <span class="arch-num" aria-hidden="true">1</span>
-      <div><h5 id="arch-onprem">On-Premises</h5><p>Hybrid identity synced to the cloud through Azure AD Connect</p></div>
-   </div>
-   <div class="arch-grid">
-<div class="arch-card"><h5>Active Directory</h5><ul><li>Domain Controllers</li><li>GPO</li><li>LDAP</li><li>Kerberos</li></ul></div>
-<div class="arch-card"><h5>Azure AD Connect</h5><ul><li>Password Hash Sync</li><li>Pass-through Auth</li><li>Federation</li></ul></div>
-<div class="arch-card"><h5>ADFS</h5><ul><li>SAML Federation</li><li>Claims-Based Auth</li></ul></div>
-<div class="arch-card"><h5>On-Prem Workloads</h5><ul><li>IIS</li><li>SQL</li><li>File Shares</li><li>Windows Server</li><li>VMware</li></ul></div>
-<div class="arch-card"><h5>Backup &amp; DR</h5><ul><li>Veeam / Zerto</li><li>Site Recovery Manager</li></ul></div>
-   </div>
-</section>
-                  <div class="arch-flow" aria-hidden="true">&darr; Hybrid sync &darr;</div>
+                  <div class="arch-step"><span class="arch-badge">1</span><div><h5>Hybrid foundation</h5><p>On-premises identity synced to the cloud</p></div></div>
+                  <ul class="arch-row"><li>Active Directory</li><li>Entra Connect (PHS / PTA)</li><li>ADFS</li><li>Entra Domain Services</li><li>Veeam · Zerto · SRM</li></ul>
+                  <div class="arch-link" aria-hidden="true"><i></i><span>sync</span></div>
 
-<section class="arch-layer entra" aria-labelledby="arch-entra">
-   <div class="arch-layer-head">
-      <span class="arch-num" aria-hidden="true">2</span>
-      <div><h5 id="arch-entra">Microsoft Entra ID (Azure Active Directory)</h5><p>Identity provider · Zero Trust core · Cloud IAM platform</p></div>
-   </div>
-   <div class="arch-grid">
-<div class="arch-card"><h5>Conditional Access</h5><ul><li>User/Group Conditions</li><li>Device Compliance</li><li>Location / IP Rules</li><li>Grant / Block / MFA</li><li>Session Controls</li></ul></div>
-<div class="arch-card"><h5>Identity Protection</h5><ul><li>Risk-Based Policies</li><li>Sign-in Risk Detection</li><li>User Risk Score</li><li>Leaked Credentials</li><li>Anomaly Alerts</li></ul></div>
-<div class="arch-card"><h5>MFA &amp; Passwordless</h5><ul><li>Authenticator App</li><li>FIDO2 / Passkeys</li><li>SMS / Voice</li><li>Hardware Tokens</li><li>Windows Hello</li></ul></div>
-<div class="arch-card"><h5>RBAC</h5><ul><li>Built-in / Custom Roles</li><li>Scope Assignment</li><li>Least Privilege</li><li>Management Groups</li></ul></div>
-<div class="arch-card"><h5>PIM</h5><ul><li>JIT Access</li><li>Approval Workflows</li><li>Time-Bound Roles</li><li>Access Reviews</li></ul></div>
-<div class="arch-card"><h5>App Registrations</h5><ul><li>OAuth 2.0 / OIDC</li><li>SAML SSO</li><li>SPN Lifecycle Mgmt</li><li>API Permissions</li></ul></div>
-<div class="arch-card"><h5>Managed Identities</h5><ul><li>System-Assigned</li><li>User-Assigned</li><li>No Credential Mgmt</li><li>Key Vault Access</li></ul></div>
-<div class="arch-card"><h5>Governance</h5><ul><li>Access Reviews</li><li>Entitlement Mgmt</li><li>Lifecycle Workflows</li><li>Terms of Use</li></ul></div>
-<div class="arch-card"><h5>External Identities</h5><ul><li>B2B Collaboration</li><li>B2C Customer Identity</li><li>Cross-Tenant Access</li><li>Guest User Mgmt</li></ul></div>
-<div class="arch-card"><h5>Device Management</h5><ul><li>Entra ID Join</li><li>Hybrid Join</li><li>Intune MDM/MAM</li><li>Compliance Policies</li></ul></div>
-<div class="arch-card"><h5>Audit &amp; Sign-in Logs</h5><ul><li>Sign-in Log Analysis</li><li>Audit Log Retention</li><li>Diagnostic Settings</li><li>Log Analytics Export</li></ul></div>
-<div class="arch-card"><h5>Azure AD Domain Services</h5><ul><li>Managed Domain</li><li>LDAP / Kerberos</li><li>Legacy App Support</li><li>No DC Management</li></ul></div>
-<p class="arch-banner">Zero Trust: Verify Explicitly &nbsp;·&nbsp; Use Least Privilege &nbsp;·&nbsp; Assume Breach</p>
-<div class="arch-card"><h5>Named Locations</h5><ul><li>Trusted IPs</li><li>Country Blocking</li><li>Compliant Networks</li><li>VPN / Proxy Detection</li></ul></div>
-<div class="arch-card"><h5>Emergency Access</h5><ul><li>Break-Glass Accounts</li><li>Global Admin Backup</li><li>Monitored Access</li><li>Excluded from CA</li></ul></div>
-<div class="arch-card"><h5>Workload Identities</h5><ul><li>Service Principals</li><li>Federated Credentials</li><li>Workload ID Protection</li><li>Certificate Auth</li></ul></div>
-   </div>
-</section>
-                  <div class="arch-flow" aria-hidden="true">&darr; Policies, tokens and managed identities &darr;</div>
+                  <div class="arch-core">
+                     <div class="arch-step"><span class="arch-badge">2</span><div><h5>Microsoft Entra ID</h5><p>Zero Trust policy engine for every user, device and workload</p></div></div>
+                     <div class="arch-pillars">
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">🛡️</span><span class="arch-kicker">Access control</span></div>
+   <h5>Conditional Access</h5>
+   <p>Device compliance, location and risk gates; grant, block or require MFA</p>
+   <ul class="arch-chips"><li>MFA &amp; passkeys</li><li>Named locations</li><li>Session controls</li></ul>
+</article>
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">🎯</span><span class="arch-kicker">Identity protection</span></div>
+   <h5>Risk-based policy</h5>
+   <p>Sign-in and user risk, leaked credentials, anomaly alerts</p>
+   <ul class="arch-chips"><li>Risk policies</li><li>Break-glass accounts</li></ul>
+</article>
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">🔑</span><span class="arch-kicker">Privilege</span></div>
+   <h5>RBAC + PIM</h5>
+   <p>Least privilege by design: just-in-time, approval-based, time-bound roles</p>
+   <ul class="arch-chips"><li>Custom roles</li><li>Access reviews</li><li>Management groups</li></ul>
+</article>
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">⚙️</span><span class="arch-kicker">Workload identity</span></div>
+   <h5>No shared secrets</h5>
+   <p>Managed identities, service principals and federated credentials</p>
+   <ul class="arch-chips"><li>App registrations</li><li>Key Vault access</li><li>Cert auth</li></ul>
+</article>
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">📋</span><span class="arch-kicker">Governance</span></div>
+   <h5>Lifecycle at scale</h5>
+   <p>Entitlement management, reviews and lifecycle workflows across tenants</p>
+   <ul class="arch-chips"><li>B2B / B2C</li><li>Terms of use</li><li>Cross-tenant access</li></ul>
+</article>
+<article class="arch-pillar">
+   <div class="arch-pillar-top"><span class="arch-ico" aria-hidden="true">💻</span><span class="arch-kicker">Devices &amp; audit</span></div>
+   <h5>Know every sign-in</h5>
+   <p>Entra join, Intune compliance, sign-in and audit logs into Log Analytics</p>
+   <ul class="arch-chips"><li>Hybrid join</li><li>Intune MDM/MAM</li><li>Diagnostic settings</li></ul>
+</article>
+                     </div>
+                  </div>
+                  <div class="arch-link" aria-hidden="true"><i></i><span>tokens &amp; policy</span></div>
 
-<section class="arch-layer platform" aria-labelledby="arch-platform">
-   <div class="arch-layer-head">
-      <span class="arch-num" aria-hidden="true">3</span>
-      <div><h5 id="arch-platform">Azure Security &amp; Platform Services</h5><p>Secrets, threat detection, monitoring, networking, delivery and automation</p></div>
-   </div>
-   <div class="arch-grid">
-<div class="arch-card"><h5>Azure Key Vault</h5><ul><li>Secrets / Keys / Certs</li><li>HSM-Backed Storage</li><li>Managed Identity Access</li><li>Git Pipeline Integration</li></ul></div>
-<div class="arch-card"><h5>Microsoft Sentinel</h5><ul><li>SIEM / SOAR</li><li>Identity Threat Detection</li><li>Automated Incident Response</li><li>KQL Analytics Rules</li></ul></div>
-<div class="arch-card"><h5>Microsoft Defender</h5><ul><li>Defender for Identity</li><li>Defender for Endpoint</li><li>Defender for Cloud</li><li>DLP Policies</li></ul></div>
-<div class="arch-card"><h5>Application Insights</h5><ul><li>APM / Telemetry</li><li>Live Metrics Stream</li><li>User Behavior Tracking</li><li>Page Views / Exceptions</li></ul></div>
-<div class="arch-card"><h5>Azure Monitor</h5><ul><li>Metrics &amp; Alerts</li><li>Log Analytics Workspace</li><li>Diagnostic Settings</li><li>Action Groups</li></ul></div>
-<div class="arch-card"><h5>Azure CDN &amp; Front Door</h5><ul><li>Global Content Delivery</li><li>WAF Integration</li><li>SSL Termination</li><li>Origin Load Balancing</li></ul></div>
-<div class="arch-card"><h5>Azure Policy</h5><ul><li>Compliance Dashboard</li><li>Policy Assignments</li><li>Resource Locks</li><li>Regulatory Compliance</li></ul></div>
-<div class="arch-card"><h5>Recovery &amp; Backup</h5><ul><li>Azure Backup</li><li>Recovery Vaults</li><li>Site Recovery (ASR)</li><li>Soft Delete / Locks</li></ul></div>
-<div class="arch-card"><h5>Network Security</h5><ul><li>Private Endpoints</li><li>NSG / Azure Firewall</li><li>VNet / Peering</li><li>Zero Trust Network</li></ul></div>
-<div class="arch-card"><h5>Storage &amp; Data</h5><ul><li>Azure Blob / Static Sites</li><li>Storage Encryption</li><li>SAS / Access Policies</li><li>Lifecycle Management</li></ul></div>
-<div class="arch-card"><h5>Azure DevOps / CI-CD</h5><ul><li>Pipelines (YAML)</li><li>ARM / Bicep Deploy</li><li>Service Connections</li><li>Workload Federated Auth</li></ul></div>
-<div class="arch-card"><h5>PowerShell Automation</h5><ul><li>Az Module / CLI</li><li>DSC / Runbooks</li><li>Graph API Scripting</li><li>Automation Accounts</li></ul></div>
-   </div>
-</section>
-                  <div class="arch-flow" aria-hidden="true">&uarr; Authenticate and authorize through Entra ID &uarr;</div>
+                  <div class="arch-step"><span class="arch-badge">3</span><div><h5>Azure security &amp; platform</h5><p>Where the identity decisions are enforced and observed</p></div></div>
+                  <ul class="arch-platform">
+<li><span class="arch-ico" aria-hidden="true">🗝️</span><b>Key Vault</b><small>Secrets, keys, certs</small></li>
+<li><span class="arch-ico" aria-hidden="true">🔭</span><b>Sentinel</b><small>SIEM / SOAR</small></li>
+<li><span class="arch-ico" aria-hidden="true">🧱</span><b>Defender</b><small>Identity, Endpoint, Cloud</small></li>
+<li><span class="arch-ico" aria-hidden="true">📈</span><b>Monitor + App Insights</b><small>Metrics, KQL, alerts</small></li>
+<li><span class="arch-ico" aria-hidden="true">📜</span><b>Azure Policy</b><small>Guardrails as code</small></li>
+<li><span class="arch-ico" aria-hidden="true">🌐</span><b>Front Door + CDN</b><small>WAF, TLS, global edge</small></li>
+<li><span class="arch-ico" aria-hidden="true">🔒</span><b>Network security</b><small>Private endpoints, NSG</small></li>
+<li><span class="arch-ico" aria-hidden="true">💾</span><b>Backup &amp; ASR</b><small>Recovery vaults, locks</small></li>
+<li><span class="arch-ico" aria-hidden="true">🚀</span><b>DevOps CI/CD</b><small>YAML pipelines, Bicep</small></li>
+<li><span class="arch-ico" aria-hidden="true">⌨️</span><b>PowerShell automation</b><small>Az, Graph, runbooks</small></li>
+                  </ul>
+                  <div class="arch-link" aria-hidden="true"><i></i><span>serves</span></div>
 
-<section class="arch-layer consumers" aria-labelledby="arch-consumers">
-   <div class="arch-layer-head">
-      <span class="arch-num" aria-hidden="true">4</span>
-      <div><h5 id="arch-consumers">End Users, Devices &amp; Integrated Applications</h5><p>What the platform serves and secures</p></div>
-   </div>
-   <div class="arch-grid">
-<div class="arch-card"><h5>Corporate Users</h5><ul><li>Windows / macOS / iOS</li><li>Entra Joined Devices</li><li>Intune Managed</li><li>JAMF (macOS/iOS)</li><li>Compliant + Trusted</li><li>WSUS / Patch Mgmt</li></ul></div>
-<div class="arch-card"><h5>Microsoft 365</h5><ul><li>Exchange Online</li><li>Teams / SharePoint</li><li>OneDrive / Viva</li><li>Power Platform</li><li>Purview Compliance</li><li>Sensitivity Labels</li></ul></div>
-<div class="arch-card"><h5>Azure Resources</h5><ul><li>VMs / AKS / Functions</li><li>SQL / Synapse / Cosmos</li><li>App Service / Logic Apps</li><li>Service Bus / Event Hub</li><li>API Management</li><li>ARM / Bicep Templates</li></ul></div>
-<div class="arch-card"><h5>SaaS Applications</h5><ul><li>SAML / OIDC SSO</li><li>App Proxy (On-Prem)</li><li>Gallery App Integration</li><li>MFA Enforced</li><li>Conditional Access</li><li>Token Issuance Policies</li></ul></div>
-<div class="arch-card"><h5>Guest / B2B / B2C</h5><ul><li>External Collaboration</li><li>Cross-Tenant Access</li><li>Access Reviews</li><li>Invitation Workflows</li><li>Customer Identity</li><li>Social Login (B2C)</li></ul></div>
-<div class="arch-card"><h5>Service Principals</h5><ul><li>App Identities</li><li>Managed Identities</li><li>CI/CD Pipeline Auth</li><li>Federated Credentials</li><li>Cert-Based Auth</li><li>Workload ID Protection</li></ul></div>
-<div class="arch-card"><h5>Monitoring &amp; Ops</h5><ul><li>App Insights (APM)</li><li>Azure Monitor Alerts</li><li>Log Analytics (KQL)</li><li>Workbooks / Dashboards</li><li>SolarWinds / Splunk</li><li>Runbooks / Automation</li></ul></div>
-   </div>
-</section>
-                  <p class="arch-foot">Mathew Dailey · Platform Engineer · Azure Administrator (AZ-104) · matdailey.com</p>
+                  <div class="arch-step"><span class="arch-badge">4</span><div><h5>Users, devices &amp; apps</h5><p>Everything the platform protects</p></div></div>
+                  <ul class="arch-row arch-row-end"><li>Corporate users</li><li>Microsoft 365</li><li>SaaS apps (SSO)</li><li>Azure workloads</li><li>Guests B2B / B2C</li><li>CI/CD pipelines</li></ul>
                </div>
             </div>
          </div>
