@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Read Three Lines of dsregcmd Before You Open a Ticket | Mathew Dailey</title>
+   <meta name="description" content="Blocked by &quot;require compliant device&quot; on a compliant device? Three dsregcmd /status fields tell you whether the problem is the client or the policy.">
+   <meta name="author" content="Mathew Dailey">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="canonical" href="https://matdailey.com/articles/dsregcmd-status-compliant-device-troubleshooting.html">
+   <meta property="og:type" content="article">
+   <meta property="og:title" content="Read Three Lines of dsregcmd Before You Open a Ticket">
+   <meta property="og:description" content="Blocked by &quot;require compliant device&quot; on a compliant device? Three dsregcmd /status fields tell you whether the problem is the client or the policy.">
+   <meta property="og:url" content="https://matdailey.com/articles/dsregcmd-status-compliant-device-troubleshooting.html">
+   <link rel="stylesheet" href="../css/default.css">
+   <link rel="stylesheet" href="../css/articles.css">
+   <script type="application/ld+json">
+   {"@context":"https://schema.org","@type":"Article","headline":"Read Three Lines of dsregcmd Before You Open a Ticket","description":"Blocked by \"require compliant device\" on a compliant device? Three dsregcmd /status fields tell you whether the problem is the client or the policy.","datePublished":"2026-11-25","dateModified":"2026-11-25","mainEntityOfPage":"https://matdailey.com/articles/dsregcmd-status-compliant-device-troubleshooting.html","author":{"@type":"Person","name":"Mathew Dailey","url":"https://matdailey.com/"}}
+   </script>
+</head>
+<body>
+   <div class="site-bar">
+      <div class="inner">
+         <a href="/">Mathew Dailey</a>
+         <nav><a href="/#about">About</a><a href="/articles/">Articles</a><a href="/#contact">Contact</a></nav>
+      </div>
+   </div>
+   <main class="page">
+      <article>
+         <div class="breadcrumbs"><a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/#identity">Identity &amp; Conditional Access</a></div>
+         <h1>Read three lines of dsregcmd before you open a ticket</h1>
+         <p class="meta">Mathew Dailey · <time datetime="2026-11-25">November 25, 2026</time></p>
+         <p class="lede">User blocked by a "require compliant device" policy on a device Intune says is compliant? Before you re-enroll anything, run <code>dsregcmd /status</code> as the signed-in user (not elevated) and read three lines.</p>
+
+<h2>The three lines</h2>
+<ol>
+<li><strong>AzureAdJoined</strong> (Device State). If NO, Conditional Access can't see the device at all.</li>
+<li><strong>AzureAdPrt</strong> (SSO State). NO means no Primary Refresh Token, so the device claim never reaches the sign-in. Since Windows 10 21H1, the Attempt Status line under it gives you the error code.</li>
+<li><strong>AzureAdPrtUpdateTime.</strong> If it's more than four hours old, the PRT isn't refreshing. Lock and unlock the device, then run it again.</li>
+</ol>
+<h2>Match it with the sign-in log</h2>
+<p>If the sign-in log's Device info tab shows no device ID, the problem is on the client, not in your policy.</p>
+<p>Thirty seconds here can save a re-enrollment that never would have fixed it.</p>
+<p>And if the device shows up fine but a device you didn't expect is getting through, check the tenant-wide default for <a href="/articles/intune-devices-without-compliance-policy.html">devices with no compliance policy</a>.</p>
+
+         <p class="meta">Sources: <a href="https://learn.microsoft.com/entra/identity/devices/troubleshoot-device-dsregcmd" target="_blank" rel="noopener">Troubleshoot devices with dsregcmd</a> · <a href="https://learn.microsoft.com/entra/identity/devices/troubleshoot-primary-refresh-token" target="_blank" rel="noopener">Troubleshoot PRT issues on Windows</a></p>
+         <div class="cluster-box">
+            <h2>Related articles</h2>
+            <ul>
+<li><a href="/articles/intune-devices-without-compliance-policy.html">Devices with no compliance policy count as compliant</a></li>
+<li><a href="/articles/conditional-access-admin-mfa-custom-roles.html">Your Conditional Access admin MFA policy may skip your custom roles</a></li>
+<li><a href="/articles/entra-stale-devices-cleanup-bitlocker-autopilot.html">Before you delete stale devices in Entra ID, check these two things</a></li>
+<li><a href="/articles/#identity">All Identity &amp; Conditional Access articles</a></li>
+            </ul>
+         </div>
+         <div class="cta">Questions or a different take? Find me on <a href="https://linkedin.com/in/mathew-d-963b575/" target="_blank" rel="noopener">LinkedIn</a> or <a href="/#contact">get in touch</a>.</div>
+      </article>
+   </main>
+   <footer class="site-foot">&copy; 2026 Mathew Dailey · <a href="/">matdailey.com</a></footer>
+</body>
+</html>

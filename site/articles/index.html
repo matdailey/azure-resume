@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>Articles on Entra ID, Azure &amp; Microsoft 365 Governance | Mathew Dailey</title>
-   <meta name="description" content="Practical articles on Microsoft Entra ID, Conditional Access, Azure governance and multi-tenant Microsoft 365 operations from a cloud platform engineer with 20+ years in the field.">
+   <title>Entra ID &amp; Intune Articles | Mathew Dailey</title>
+   <meta name="description" content="Practical articles on Microsoft Entra ID, Conditional Access, Intune and Windows device management from a cloud platform engineer with 20+ years in the field.">
    <meta name="author" content="Mathew Dailey">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="canonical" href="https://matdailey.com/articles/">
 
    <meta property="og:type" content="website">
    <meta property="og:title" content="Articles by Mathew Dailey">
-   <meta property="og:description" content="Practical writing on Entra ID, Azure governance and Microsoft 365 operations.">
+   <meta property="og:description" content="Practical writing on Entra ID, Conditional Access and Intune.">
    <meta property="og:url" content="https://matdailey.com/articles/">
 
    <link rel="stylesheet" href="../css/default.css">
@@ -38,8 +38,8 @@
    <main class="page">
       <div class="breadcrumbs"><a href="/">Home</a> › Articles</div>
 
-      <h1>Entra ID, Azure &amp; Microsoft 365 Governance</h1>
-      <p class="lede">Field notes from running identity, security and governance across Microsoft cloud tenants. Each article covers one problem in depth and links to the related ones, so you can follow a topic as far as you need.</p>
+      <h1>Entra ID, Intune &amp; Microsoft 365 Field Notes</h1>
+      <p class="lede">Field notes on the Entra ID and Intune gotchas that cost admins hours, each with a fix you can use the same day. Each article covers one problem in depth and links to the related ones, so you can follow a topic as far as you need.</p>
 
       <!--
          HOW TO ADD AN ARTICLE
@@ -51,15 +51,21 @@
 
       <h2 id="identity">Identity &amp; Conditional Access</h2>
       <div class="card-list">
-         <!-- <a class="card" href="/articles/slug.html"><span class="tag">Entra ID</span><h3>Title</h3><p>One-sentence summary.</p></a> -->
+         <a class="card" href="/articles/conditional-access-admin-mfa-custom-roles.html"><span class="tag">Conditional Access</span><h3>Your Conditional Access admin MFA policy may skip your custom roles</h3><p>Conditional Access targeting Directory roles only covers built-in roles. Here's how to bring custom and AU-scoped admins under phishing-resistant MFA.</p></a>
+         <a class="card" href="/articles/dsregcmd-status-compliant-device-troubleshooting.html"><span class="tag">Conditional Access</span><h3>Read three lines of dsregcmd before you open a ticket</h3><p>Blocked by "require compliant device" on a compliant device? Three dsregcmd /status fields tell you whether the problem is the client or the policy.</p></a>
+         <a class="card" href="/articles/intune-devices-without-compliance-policy.html"><span class="tag">Intune Compliance</span><h3>Devices with no compliance policy count as compliant</h3><p>Intune's default marks devices with no compliance policy as Compliant, which lets them pass Conditional Access. How to flip it without locking anyone out.</p></a>
       </div>
 
-      <h2 id="azure-governance">Azure Governance</h2>
+      <h2 id="intune-scripts">Intune Apps &amp; Scripts</h2>
       <div class="card-list">
+         <a class="card" href="/articles/intune-remediation-script-exit-codes.html"><span class="tag">Intune Remediations</span><h3>Why your Intune Remediation script "never finds an issue"</h3><p>Intune Remediations only run the fix when detection exits 1. Four habits for detection scripts that report correctly and double as fleet inventory.</p></a>
+         <a class="card" href="/articles/intune-win32-app-detection-stderr.html"><span class="tag">Intune Win32 Apps</span><h3>Win32 app says "not installed" but it is? Check STDERR</h3><p>Intune Win32 custom detection fails if anything hits STDERR, even with exit 0. Where to find the logs and how to write detection that sticks.</p></a>
       </div>
 
-      <h2 id="multi-tenant">Multi-Tenant Operations</h2>
+      <h2 id="device-lifecycle">Device Security &amp; Lifecycle</h2>
       <div class="card-list">
+         <a class="card" href="/articles/intune-laps-rotate-local-admin-password-permission.html"><span class="tag">Windows LAPS</span><h3>"Rotate local admin password" is greyed out, even for Intune Admins</h3><p>Windows LAPS rotation in Intune isn't in any built-in role. How to grant view and rotate permissions separately and scope them tightly.</p></a>
+         <a class="card" href="/articles/entra-stale-devices-cleanup-bitlocker-autopilot.html"><span class="tag">Entra ID Devices</span><h3>Before you delete stale devices in Entra ID, check these two things</h3><p>Deleting a stale Entra device also deletes its BitLocker keys and can break Autopilot. A safer find, disable, then delete routine.</p></a>
       </div>
 
       <div class="cta">

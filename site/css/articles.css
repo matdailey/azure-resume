@@ -50,3 +50,4 @@ body { background: #fff; color: #333; }
 
 .site-foot { background: var(--dark); color: #888; text-align: center; padding: 24px 20px; font-size: 13px; }
 .site-foot a { color: #ccc; }
+.page strong, .page b { font-size: inherit; color: #333; }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Devices With No Compliance Policy Count as Compliant | Mathew Dailey</title>
+   <meta name="description" content="Intune&#x27;s default marks devices with no compliance policy as Compliant, which lets them pass Conditional Access. How to flip it without locking anyone out.">
+   <meta name="author" content="Mathew Dailey">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="canonical" href="https://matdailey.com/articles/intune-devices-without-compliance-policy.html">
+   <meta property="og:type" content="article">
+   <meta property="og:title" content="Devices With No Compliance Policy Count as Compliant">
+   <meta property="og:description" content="Intune&#x27;s default marks devices with no compliance policy as Compliant, which lets them pass Conditional Access. How to flip it without locking anyone out.">
+   <meta property="og:url" content="https://matdailey.com/articles/intune-devices-without-compliance-policy.html">
+   <link rel="stylesheet" href="../css/default.css">
+   <link rel="stylesheet" href="../css/articles.css">
+   <script type="application/ld+json">
+   {"@context":"https://schema.org","@type":"Article","headline":"Devices With No Compliance Policy Count as Compliant","description":"Intune's default marks devices with no compliance policy as Compliant, which lets them pass Conditional Access. How to flip it without locking anyone out.","datePublished":"2026-11-25","dateModified":"2026-11-25","mainEntityOfPage":"https://matdailey.com/articles/intune-devices-without-compliance-policy.html","author":{"@type":"Person","name":"Mathew Dailey","url":"https://matdailey.com/"}}
+   </script>
+</head>
+<body>
+   <div class="site-bar">
+      <div class="inner">
+         <a href="/">Mathew Dailey</a>
+         <nav><a href="/#about">About</a><a href="/articles/">Articles</a><a href="/#contact">Contact</a></nav>
+      </div>
+   </div>
+   <main class="page">
+      <article>
+         <div class="breadcrumbs"><a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/#identity">Identity &amp; Conditional Access</a></div>
+         <h1>Devices with no compliance policy count as compliant</h1>
+         <p class="meta">Mathew Dailey · <time datetime="2026-11-25">November 25, 2026</time></p>
+         <p class="lede">Your "require compliant device" policy might be letting in devices with no compliance policy at all.</p>
+
+<h2>The setting most people forget</h2>
+<p>Intune has a tenant-wide setting most people set once and forget: "Mark devices with no compliance policy assigned as." The default is <strong>Compliant</strong>.</p>
+<p>So any enrolled device that falls outside your compliance assignments (a new platform, a missed group, a device excluded by a filter) can pass a Conditional Access compliance check without being evaluated against anything.</p>
+<h2>The fix takes a minute</h2>
+<ol>
+<li>Go to Endpoint security → Device compliance → Compliance policy settings.</li>
+<li>Set "Mark devices with no compliance policy assigned as" to <strong>Not compliant</strong>.</li>
+<li>Before flipping it, open the "Devices without compliance policy" report and assign policies to anything listed, so nobody is locked out.</li>
+</ol>
+<h2>While you're there</h2>
+<p>Check "Compliance status validity period." The default is 30 days (range 1–120). A device that doesn't report within that window becomes noncompliant, so shorter is stricter.</p>
+<p>If a device that should pass is getting blocked instead, <a href="/articles/dsregcmd-status-compliant-device-troubleshooting.html">read three lines of dsregcmd</a> before you re-enroll it.</p>
+
+         <p class="meta">Sources: <a href="https://learn.microsoft.com/intune/device-security/compliance/overview#compliance-policy-settings" target="_blank" rel="noopener">Compliance policy settings</a> · <a href="https://learn.microsoft.com/intune/device-security/compliance/monitor-policy" target="_blank" rel="noopener">Monitor device compliance</a></p>
+         <div class="cluster-box">
+            <h2>Related articles</h2>
+            <ul>
+<li><a href="/articles/dsregcmd-status-compliant-device-troubleshooting.html">Read three lines of dsregcmd before you open a ticket</a></li>
+<li><a href="/articles/conditional-access-admin-mfa-custom-roles.html">Your Conditional Access admin MFA policy may skip your custom roles</a></li>
+<li><a href="/articles/#identity">All Identity &amp; Conditional Access articles</a></li>
+            </ul>
+         </div>
+         <div class="cta">Questions or a different take? Find me on <a href="https://linkedin.com/in/mathew-d-963b575/" target="_blank" rel="noopener">LinkedIn</a> or <a href="/#contact">get in touch</a>.</div>
+      </article>
+   </main>
+   <footer class="site-foot">&copy; 2026 Mathew Dailey · <a href="/">matdailey.com</a></footer>
+</body>
+</html>

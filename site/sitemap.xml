@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url><loc>https://matdailey.com/</loc></url>
-   <url><loc>https://matdailey.com/articles/</loc></url>
+   <url><loc>https://matdailey.com/</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/conditional-access-admin-mfa-custom-roles.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/intune-remediation-script-exit-codes.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/intune-laps-rotate-local-admin-password-permission.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/dsregcmd-status-compliant-device-troubleshooting.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/entra-stale-devices-cleanup-bitlocker-autopilot.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/intune-win32-app-detection-stderr.html</loc><lastmod>2026-11-25</lastmod></url>
+   <url><loc>https://matdailey.com/articles/intune-devices-without-compliance-policy.html</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>

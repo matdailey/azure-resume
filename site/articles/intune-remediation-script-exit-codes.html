@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Intune Remediation Never Finds an Issue? Check Exit Codes | Mathew Dailey</title>
+   <meta name="description" content="Intune Remediations only run the fix when detection exits 1. Four habits for detection scripts that report correctly and double as fleet inventory.">
+   <meta name="author" content="Mathew Dailey">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="canonical" href="https://matdailey.com/articles/intune-remediation-script-exit-codes.html">
+   <meta property="og:type" content="article">
+   <meta property="og:title" content="Intune Remediation Never Finds an Issue? Check Exit Codes">
+   <meta property="og:description" content="Intune Remediations only run the fix when detection exits 1. Four habits for detection scripts that report correctly and double as fleet inventory.">
+   <meta property="og:url" content="https://matdailey.com/articles/intune-remediation-script-exit-codes.html">
+   <link rel="stylesheet" href="../css/default.css">
+   <link rel="stylesheet" href="../css/articles.css">
+   <script type="application/ld+json">
+   {"@context":"https://schema.org","@type":"Article","headline":"Intune Remediation Never Finds an Issue? Check Exit Codes","description":"Intune Remediations only run the fix when detection exits 1. Four habits for detection scripts that report correctly and double as fleet inventory.","datePublished":"2026-11-25","dateModified":"2026-11-25","mainEntityOfPage":"https://matdailey.com/articles/intune-remediation-script-exit-codes.html","author":{"@type":"Person","name":"Mathew Dailey","url":"https://matdailey.com/"}}
+   </script>
+</head>
+<body>
+   <div class="site-bar">
+      <div class="inner">
+         <a href="/">Mathew Dailey</a>
+         <nav><a href="/#about">About</a><a href="/articles/">Articles</a><a href="/#contact">Contact</a></nav>
+      </div>
+   </div>
+   <main class="page">
+      <article>
+         <div class="breadcrumbs"><a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/#intune-scripts">Intune Apps &amp; Scripts</a></div>
+         <h1>Why your Intune Remediation script "never finds an issue"</h1>
+         <p class="meta">Mathew Dailey · <time datetime="2026-11-25">November 25, 2026</time></p>
+         <p class="lede">Intune Remediation showing "Without issues" on every device, even ones you know are broken? Check the exit code before you check the logic.</p>
+
+<h2>How detection decides</h2>
+<p>The remediation script only runs when the detection script ends with <code>exit 1</code>. Any other exit code, including a script that throws or one that returns nothing, is treated as "issue not found."</p>
+<h2>Four habits that save hours</h2>
+<ol>
+<li><strong>End every path explicitly.</strong> <code>exit 1</code> when the problem exists, <code>exit 0</code> when it doesn't. Wrap the logic in try/catch so an error can't fall through to a silent pass.</li>
+<li><strong>Write one short line of output</strong> (<code>Write-Output</code>) in each branch. It shows up as a column in the device status report, and the limit is 2,048 characters.</li>
+<li><strong>Mind the encoding.</strong> If "Enforce script signature check" is on, save the script as UTF-8 without BOM.</li>
+<li><strong>Test locally as SYSTEM</strong> before uploading (<code>psexec -i -s powershell.exe</code>). Most "works on my machine" bugs are user-context assumptions.</li>
+</ol>
+<h2>Bonus: free inventory</h2>
+<p>The output column is the cheapest fleet-wide inventory you have. Use it.</p>
+<p>Win32 app detection scripts follow similar rules with one extra trap: <a href="/articles/intune-win32-app-detection-stderr.html">anything written to STDERR marks the app as not installed</a>.</p>
+
+         <p class="meta">Sources: <a href="https://learn.microsoft.com/intune/device-management/tools/deploy-remediations" target="_blank" rel="noopener">Remediations: prerequisites and script requirements</a> · <a href="https://learn.microsoft.com/intune/device-management/tools/run-powershell-scripts-windows#common-issues-and-resolutions" target="_blank" rel="noopener">PowerShell scripts: common issues</a></p>
+         <div class="cluster-box">
+            <h2>Related articles</h2>
+            <ul>
+<li><a href="/articles/intune-win32-app-detection-stderr.html">Win32 app says "not installed" but it is? Check STDERR</a></li>
+<li><a href="/articles/intune-devices-without-compliance-policy.html">Devices with no compliance policy count as compliant</a></li>
+<li><a href="/articles/#intune-scripts">All Intune Apps &amp; Scripts articles</a></li>
+            </ul>
+         </div>
+         <div class="cta">Questions or a different take? Find me on <a href="https://linkedin.com/in/mathew-d-963b575/" target="_blank" rel="noopener">LinkedIn</a> or <a href="/#contact">get in touch</a>.</div>
+      </article>
+   </main>
+   <footer class="site-foot">&copy; 2026 Mathew Dailey · <a href="/">matdailey.com</a></footer>
+</body>
+</html>
