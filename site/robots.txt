@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /articles/_template.html
+
+Sitemap: https://matdailey.com/sitemap.xml
